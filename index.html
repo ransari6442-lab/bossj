@@ -6,10 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ZIYA MALIK | Best Offers & Bonus</title>
-<meta name="description" content="ZIYA MALIK official page. Explore offers, gifts and bonus updates. Join our Telegram community.">
+<meta name="description" content="ZIYA MALIK official page. Best offers, gifts and bonus updates. Join our Telegram community.">
 <meta name="theme-color" content="#080817">
 
-<!-- META PIXEL -->
+<!-- META PIXEL CODE -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -35,6 +35,7 @@ fbq('track','PageView');
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1699954291795689&ev=PageView&noscript=1"/>
 </noscript>
+<!-- END PIXEL -->
 
 <style>
 *{
@@ -62,7 +63,6 @@ radial-gradient(circle at 50% 30%,#25206a,transparent 45%),
 linear-gradient(135deg,#050510,#10102b,#050510);
 }
 
-/* ANIMATED BACKGROUND */
 body::before{
 content:"";
 position:fixed;
@@ -80,7 +80,6 @@ pointer-events:none;
 to{transform:rotate(360deg)}
 }
 
-/* MAIN CARD */
 .container{
 position:relative;
 z-index:1;
@@ -91,12 +90,10 @@ text-align:center;
 border-radius:25px;
 background:rgba(10,10,30,.94);
 border:1px solid rgba(255,255,255,.18);
-box-shadow:
-0 0 35px #6500ff55,
+box-shadow:0 0 35px #6500ff55,
 inset 0 0 20px #00d9ff15;
 }
 
-/* PROFILE */
 .profile{
 width:clamp(85px,19vh,120px);
 height:clamp(85px,19vh,120px);
@@ -124,7 +121,6 @@ from{box-shadow:0 0 15px #00eaff}
 to{box-shadow:0 0 30px #ff00d4,0 0 45px #00eaff}
 }
 
-/* NAME */
 h1{
 margin-top:12px;
 font-size:clamp(25px,7vw,34px);
@@ -143,7 +139,6 @@ animation:shine 3s linear infinite;
 to{background-position:200%}
 }
 
-/* OFFER */
 .offer-text{
 margin-top:13px;
 font-size:16px;
@@ -159,7 +154,6 @@ background-size:200%;
 animation:shine 2s linear infinite;
 }
 
-/* BONUS */
 .bonus{
 margin-top:11px;
 padding:10px 5px;
@@ -179,16 +173,14 @@ from{box-shadow:0 0 8px #ffae0033}
 to{box-shadow:0 0 20px #ffae0099}
 }
 
-/* SUBTITLE */
 .subtitle{
-color:#ffffff;
+color:#fff;
 font-size:11px;
 letter-spacing:2px;
 margin-top:10px;
 font-weight:bold;
 }
 
-/* TELEGRAM BUTTON */
 .telegram{
 display:block;
 width:100%;
@@ -196,7 +188,7 @@ margin-top:17px;
 padding:15px 10px;
 border-radius:50px;
 text-decoration:none;
-color:white;
+color:#fff;
 font-size:16px;
 font-weight:900;
 letter-spacing:1px;
@@ -213,7 +205,6 @@ cursor:pointer;
 transform:scale(.96);
 }
 
-/* FOOTER */
 .footer{
 color:#9999c0;
 font-size:9px;
@@ -222,7 +213,6 @@ letter-spacing:1px;
 line-height:1.5;
 }
 
-/* SMALL MOBILE */
 @media(max-height:650px){
 .container{padding:12px;}
 .profile{width:70px;height:70px;}
@@ -247,22 +237,18 @@ h1{font-size:23px;}
 
 <main class="container">
 
-  <!-- PROFILE PHOTO -->
   <div class="profile">
     <img
       src="https://i.ibb.co/1J2HgYpQ/IMG-20261103-094934-226.jpg"
       alt="ZIYA MALIK Profile">
   </div>
 
-  <!-- NAME -->
   <h1>ZIYA MALIK</h1>
 
-  <!-- OFFERS -->
   <div class="offer-text">
     🎁 BEST OFFERS & BEST GIFTS 🎁
   </div>
 
-  <!-- BONUS -->
   <div class="bonus">
     ⭐ EXCLUSIVE BONUS ⭐
   </div>
@@ -271,17 +257,15 @@ h1{font-size:23px;}
     JOIN NOW & DON'T MISS OUT!
   </div>
 
-  <!-- TELEGRAM BUTTON -->
   <a
     class="telegram"
+    id="telegramButton"
     href="https://t.me/+uL2bs041VKFmNDU1"
     target="_blank"
-    rel="noopener noreferrer"
-    onclick="trackTelegramClick(event)">
+    rel="noopener noreferrer">
     ✈ JOIN TELEGRAM NOW
   </a>
 
-  <!-- FOOTER -->
   <div class="footer">
     WELCOME TO OUR COMMUNITY
   </div>
@@ -290,40 +274,27 @@ h1{font-size:23px;}
 
 <!-- TELEGRAM CLICK TRACKING -->
 <script>
-let clicked = false;
+const telegramButton =
+document.getElementById('telegramButton');
 
-function trackTelegramClick(event){
+telegramButton.addEventListener('click',function(){
 
-  if(clicked){
-    event.preventDefault();
-    return;
-  }
-
-  clicked = true;
-  event.preventDefault();
-
-  const telegramUrl = event.currentTarget.href;
-
-  if(typeof fbq === "function"){
+  if(typeof fbq === 'function'){
 
     fbq('track','Subscribe');
 
-    setTimeout(function(){
-      window.open(telegramUrl,'_blank');
-      clicked = false;
-    },500);
-
   }else{
 
-    window.open(telegramUrl,'_blank');
-    clicked = false;
+    console.error('Meta Pixel not loaded');
 
   }
-}
+
+});
 </script>
 
 </body>
 </html>
+
 
 
 
