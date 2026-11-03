@@ -5,16 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ZIYA MALIK | Learning Page</title>
-<meta name="description" content="ZIYA MALIK official learning page. Join Telegram for learning and updates.">
+<title>ZIYA MALIK | Best Offers & Gifts</title>
+<meta name="description" content="ZIYA MALIK official page. Join now for best offers, gifts and updates.">
 <meta name="theme-color" content="#080817">
 
-<!-- NEW META PIXEL CODE -->
+<!-- META PIXEL -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;
+if(!f._fbq)f.fbq=n;
 n.push=n;
 n.loaded=!0;
 n.version='2.0';
@@ -24,196 +24,251 @@ t.async=!0;
 t.src=v;
 s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)
-}(window, document,'script',
+}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
-fbq('init', '1699954291795689');
-fbq('track', 'PageView');
+fbq('init','1699954291795689');
+fbq('track','PageView');
 </script>
 
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1699954291795689&ev=PageView&noscript=1"/>
 </noscript>
-<!-- END META PIXEL CODE -->
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
-body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  font-family: Arial, sans-serif;
-  background:
-    radial-gradient(circle at 50% 30%, #25206a, transparent 45%),
-    linear-gradient(135deg,#050510,#10102b,#050510);
+html,body{
+width:100%;
+height:100%;
+overflow:hidden;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: -50%;
-  background: conic-gradient(
-    transparent,
-    #00eaff,
-    transparent,
-    #ff00cc,
-    transparent,
-    #ffe600,
-    transparent
-  );
-  animation: rotate 12s linear infinite;
-  opacity: .13;
-  pointer-events: none;
+body{
+height:100vh;
+height:100dvh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:12px;
+font-family:Arial,sans-serif;
+background:
+radial-gradient(circle at 50% 30%,#25206a,transparent 45%),
+linear-gradient(135deg,#050510,#10102b,#050510);
 }
 
-@keyframes rotate {
-  to { transform: rotate(360deg); }
+/* BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+inset:-50%;
+background:conic-gradient(
+transparent,#00eaff,transparent,
+#ff00cc,transparent,#ffe600,transparent
+);
+animation:rotate 14s linear infinite;
+opacity:.12;
+pointer-events:none;
 }
 
-.container {
-  position: relative;
-  width: 90%;
-  max-width: 410px;
-  text-align: center;
-  padding: 45px 20px;
-  border-radius: 28px;
-  background: rgba(10,10,30,.83);
-  border: 1px solid rgba(255,255,255,.16);
-  box-shadow: 0 0 45px #6500ff55,
-              inset 0 0 25px #00d9ff15;
-  z-index: 1;
+@keyframes rotate{
+to{transform:rotate(360deg)}
 }
 
-.profile {
-  width: 155px;
-  height: 155px;
-  margin: auto;
-  padding: 5px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,#00f0ff,#ff00d4,#ffe600);
-  box-shadow: 0 0 20px #00eaff,
-              0 0 45px #b000ff;
-  animation: glow 2s infinite alternate;
+/* MAIN CARD */
+.container{
+position:relative;
+z-index:1;
+width:100%;
+max-width:360px;
+padding:22px 18px;
+text-align:center;
+border-radius:25px;
+background:rgba(10,10,30,.93);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:
+0 0 35px #6500ff55,
+inset 0 0 20px #00d9ff15;
 }
 
-.profile img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #09091c;
+/* PROFILE */
+.profile{
+width:clamp(85px,22vh,125px);
+height:clamp(85px,22vh,125px);
+margin:auto;
+padding:4px;
+border-radius:50%;
+background:linear-gradient(
+135deg,#00f0ff,#ff00d4,#ffe600
+);
+box-shadow:0 0 25px #00eaff;
+animation:glow 2s infinite alternate;
 }
 
-@keyframes glow {
-  from { box-shadow: 0 0 15px #00eaff; }
-  to { box-shadow: 0 0 35px #ff00d4,0 0 60px #00eaff; }
+.profile img{
+display:block;
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:50%;
+border:4px solid #09091c;
 }
 
-h1 {
-  margin-top: 27px;
-  font-size: 34px;
-  font-weight: 1000;
-  letter-spacing: 2px;
-  background: linear-gradient(90deg,#00f5ff,#ff00e6,#ffe600);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine 3s linear infinite;
-  filter: drop-shadow(0 3px 8px #00d9ff66);
+@keyframes glow{
+from{box-shadow:0 0 15px #00eaff}
+to{box-shadow:0 0 35px #ff00d4,0 0 55px #00eaff}
 }
 
-@keyframes shine {
-  to { background-position: 200%; }
+/* NAME */
+h1{
+margin-top:15px;
+font-size:clamp(25px,7vw,34px);
+font-weight:1000;
+letter-spacing:2px;
+background:linear-gradient(
+90deg,#00f5ff,#ff00e6,#ffe600
+);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 3s linear infinite;
+filter:drop-shadow(0 3px 8px #00d9ff66);
 }
 
-.subtitle {
-  color: #d7d7ff;
-  font-size: 13px;
-  letter-spacing: 3px;
-  margin-top: 12px;
-  font-weight: bold;
+@keyframes shine{
+to{background-position:200%}
 }
 
-.telegram {
-  display: block;
-  margin-top: 32px;
-  padding: 17px 12px;
-  border-radius: 50px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 900;
-  letter-spacing: 1px;
-  background: linear-gradient(90deg,#008cff,#00e5ff,#0077ff);
-  box-shadow: 0 0 20px #00bfff99;
-  transition: .3s;
-  cursor: pointer;
+/* OFFER TEXT */
+.offer-text{
+margin-top:17px;
+font-size:17px;
+font-weight:900;
+letter-spacing:1px;
+line-height:1.4;
+background:linear-gradient(
+90deg,#ffe600,#ff8c00,#ff00cc,#00eaff
+);
+background-size:200%;
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+animation:shine 2s linear infinite;
 }
 
-.telegram:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 35px #00eaff;
+.subtitle{
+color:#ffffff;
+font-size:12px;
+letter-spacing:2px;
+margin-top:10px;
+font-weight:bold;
 }
 
-.telegram:active {
-  transform: scale(.97);
+/* JOIN BUTTON */
+.telegram{
+display:block;
+width:100%;
+margin-top:22px;
+padding:15px 10px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-size:17px;
+font-weight:900;
+letter-spacing:1px;
+background:linear-gradient(
+90deg,#008cff,#00e5ff,#0077ff
+);
+box-shadow:0 0 20px #00bfff99;
+transition:.2s;
+cursor:pointer;
+-webkit-tap-highlight-color:transparent;
 }
 
-.footer {
-  color: #8888b8;
-  font-size: 11px;
-  margin-top: 28px;
-  letter-spacing: 2px;
+.telegram:active{
+transform:scale(.96);
+}
+
+/* FOOTER */
+.footer{
+color:#9999c0;
+font-size:9px;
+margin-top:17px;
+letter-spacing:1px;
+line-height:1.5;
+}
+
+/* SMALL MOBILE */
+@media(max-height:650px){
+.container{padding:13px;}
+.profile{width:72px;height:72px;}
+h1{margin-top:9px;font-size:24px;}
+.offer-text{margin-top:10px;font-size:15px;}
+.subtitle{margin-top:6px;font-size:10px;}
+.telegram{margin-top:13px;padding:12px;font-size:15px;}
+.footer{margin-top:10px;}
+}
+
+@media(max-width:340px){
+.container{padding:14px 12px;}
+h1{font-size:23px;}
+.offer-text{font-size:14px;}
+.telegram{font-size:15px;}
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<main class="container">
 
+  <!-- PROFILE PHOTO -->
   <div class="profile">
     <img
       src="https://i.ibb.co/1J2HgYpQ/IMG-20261103-094934-226.jpg"
       alt="ZIYA MALIK Profile">
   </div>
 
+  <!-- NAME -->
   <h1>ZIYA MALIK</h1>
 
-  <div class="subtitle">
-    OFFICIAL LEARNING PAGE
+  <!-- OFFERS -->
+  <div class="offer-text">
+    🎁 BEST OFFERS & BEST GIFTS 🎁
   </div>
 
+  <div class="subtitle">
+    JOIN NOW & DON'T MISS OUT!
+  </div>
+
+  <!-- TELEGRAM BUTTON -->
   <a
     class="telegram"
     href="https://t.me/+uL2bs041VKFmNDU1"
     target="_blank"
     rel="noopener noreferrer"
     onclick="trackTelegramClick(event)">
-    ✈ JOIN TELEGRAM
+    ✈ JOIN TELEGRAM NOW
   </a>
 
+  <!-- FOOTER -->
   <div class="footer">
-    WELCOME TO OUR LEARNING COMMUNITY
+    WELCOME TO OUR COMMUNITY
   </div>
 
-</div>
+</main>
 
-<!-- TELEGRAM BUTTON TRACKING -->
+<!-- META PIXEL SUBSCRIBE TRACKING -->
 <script>
 let clicked = false;
 
-function trackTelegramClick(event) {
+function trackTelegramClick(event){
 
-  if (clicked) {
+  if(clicked){
     event.preventDefault();
     return;
   }
@@ -223,18 +278,18 @@ function trackTelegramClick(event) {
 
   const telegramUrl = event.currentTarget.href;
 
-  if (typeof fbq === "function") {
+  if(typeof fbq === "function"){
 
-    fbq('track', 'Subscribe');
+    fbq('track','Subscribe');
 
-    setTimeout(function() {
-      window.open(telegramUrl, '_blank');
+    setTimeout(function(){
+      window.open(telegramUrl,'_blank');
       clicked = false;
-    }, 500);
+    },500);
 
-  } else {
+  }else{
 
-    window.open(telegramUrl, '_blank');
+    window.open(telegramUrl,'_blank');
     clicked = false;
 
   }
