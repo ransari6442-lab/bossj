@@ -4,28 +4,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ZIYA MALIK | Learning Page</title>
+
 <meta name="description" content="ZIYA MALIK official learning page. Join Telegram for learning and updates.">
 <meta name="theme-color" content="#080817">
 
-<!-- Meta Pixel Code -->
+<!-- META PIXEL CODE -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
 n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '1733929538743733');
 fbq('track', 'PageView');
 </script>
+
 <noscript>
 <img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1733929538743733&ev=PageView&noscript=1"/>
 </noscript>
-<!-- End Meta Pixel Code -->
+<!-- END META PIXEL CODE -->
 
 <style>
 * {
@@ -65,7 +76,9 @@ body::before {
 }
 
 @keyframes rotate {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .container {
@@ -77,8 +90,9 @@ body::before {
   border-radius: 28px;
   background: rgba(10,10,30,.83);
   border: 1px solid rgba(255,255,255,.16);
-  box-shadow: 0 0 45px #6500ff55,
-              inset 0 0 25px #00d9ff15;
+  box-shadow:
+    0 0 45px #6500ff55,
+    inset 0 0 25px #00d9ff15;
   z-index: 1;
 }
 
@@ -89,8 +103,9 @@ body::before {
   padding: 5px;
   border-radius: 50%;
   background: linear-gradient(135deg,#00f0ff,#ff00d4,#ffe600);
-  box-shadow: 0 0 20px #00eaff,
-              0 0 45px #b000ff;
+  box-shadow:
+    0 0 20px #00eaff,
+    0 0 45px #b000ff;
   animation: glow 2s infinite alternate;
 }
 
@@ -103,8 +118,12 @@ body::before {
 }
 
 @keyframes glow {
-  from { box-shadow: 0 0 15px #00eaff; }
-  to { box-shadow: 0 0 35px #ff00d4,0 0 60px #00eaff; }
+  from {
+    box-shadow: 0 0 15px #00eaff;
+  }
+  to {
+    box-shadow: 0 0 35px #ff00d4,0 0 60px #00eaff;
+  }
 }
 
 h1 {
@@ -121,7 +140,9 @@ h1 {
 }
 
 @keyframes shine {
-  to { background-position: 200%; }
+  to {
+    background-position: 200%;
+  }
 }
 
 .subtitle {
@@ -145,6 +166,7 @@ h1 {
   background: linear-gradient(90deg,#008cff,#00e5ff,#0077ff);
   box-shadow: 0 0 20px #00bfff99;
   transition: .3s;
+  cursor: pointer;
 }
 
 .telegram:hover {
@@ -170,8 +192,9 @@ h1 {
 <div class="container">
 
   <div class="profile">
-    <img src="https://i.ibb.co/1J2HgYpQ/IMG-20261103-094934-226.jpg"
-         alt="ZIYA MALIK Profile">
+    <img
+      src="https://i.ibb.co/1J2HgYpQ/IMG-20261103-094934-226.jpg"
+      alt="ZIYA MALIK Profile">
   </div>
 
   <h1>ZIYA MALIK</h1>
@@ -180,10 +203,12 @@ h1 {
     OFFICIAL LEARNING PAGE
   </div>
 
-  <a class="telegram"
-     href="https://t.me/+uL2bs041VKFmNDU1"
-     target="_blank"
-     rel="noopener noreferrer">
+  <a
+    class="telegram"
+    href="https://t.me/+uL2bs041VKFmNDU1"
+    target="_blank"
+    rel="noopener noreferrer"
+    onclick="trackTelegramClick(event)">
     ✈ JOIN TELEGRAM
   </a>
 
@@ -193,19 +218,42 @@ h1 {
 
 </div>
 
+<!-- TELEGRAM BUTTON PIXEL TRACKING -->
 <script>
 let clicked = false;
 
-document.querySelector(".telegram").addEventListener("click", function(e) {
+function trackTelegramClick(event) {
+
   if (clicked) {
-    e.preventDefault();
+    event.preventDefault();
     return;
   }
+
   clicked = true;
-  setTimeout(() => { clicked = false; }, 1500);
-});
+
+  event.preventDefault();
+
+  const telegramUrl = event.currentTarget.href;
+
+  if (typeof fbq === "function") {
+
+    fbq('track', 'Subscribe');
+
+    setTimeout(function() {
+      window.open(telegramUrl, '_blank');
+      clicked = false;
+    }, 500);
+
+  } else {
+
+    window.open(telegramUrl, '_blank');
+    clicked = false;
+
+  }
+}
 </script>
 
 </body>
 </html>
+
 
